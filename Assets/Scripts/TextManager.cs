@@ -25,9 +25,37 @@ public class TextManager : MonoBehaviour
     private string _nextText = "";
     private string _typingText = "";
 
+    public TextAsset fileData;
+    private string[] fileDataInfo;
+    private List <string[]> dialogueSections = new List<string[]>(); // NOT USED
+
+
+    private List<string> tempNames = new List<string>();
+    private List<string> tempDialogue = new List<string>();
+
+    private int currentTextIndex = 0; // TODO add in state manager + finsih setup
+    //public string fileData = System.IO.File.ReadAllText("/assets/CSV Files/Mimic Dialogue - Sheet 1.csv");
+
     // Start is called before the first frame update
     void Start()
     {
+        string[] section;
+        fileDataInfo = fileData.text.Split("{STOP}");
+        for (int i = 0; i < fileDataInfo.Length; i++)
+        {
+            //section = fileDataInfo[i].Split(",");
+            //dialogueSections.Add(section);
+            //Debug.Log(fileDataInfo[i]);
+        }
+
+       /* for (int i = 0; i < fileDataInfo.Length; i++)
+        {
+            Debug.Log(dialogueSections[i]);
+        }
+*/
+        
+
+
         SetupInitialText();
     }
 
@@ -46,6 +74,38 @@ public class TextManager : MonoBehaviour
         _nextText = "<color=#ff000000>" + _tempText + "</color>";
         bodyText.text = _nextText;
         
+    }
+
+    public void SetupNewText(GameObject personClicked)
+    {
+        Character currentCharacter = personClicked.GetComponent<Character>();
+        int characterDialogueIndex = currentCharacter.currentDialogueIndex;
+        string currentDialogueInfo = fileDataInfo[characterDialogueIndex - 1];
+        string[] currentInfoSplit = currentDialogueInfo.Split(',');
+
+        orguanizeText(currentInfoSplit, currentCharacter);
+    }
+
+    private void orguanizeText(string[] currentInfo, Character personClicked)
+    {
+        for(var i = 0; i < currentInfo.Length; i++)
+        {
+            string current = currentInfo[i];
+
+
+            if (current.Trim().Equals("{NAME}".Trim()))
+            {
+                tempNames.Add(currentInfo[i + 1]);
+            }
+            else if (current.Trim().Equals("{DIALOGUE}".Trim()))
+            {
+                tempNames.Add(currentInfo[i + 1]);
+            }
+            else if (current.Trim().Equals("{STOP}".Trim()))
+            {
+                personClicked.updateDialogueIndex(int.Parse(currentInfo[i - 1]));
+            }
+        }    
     }
 
     public void ActivateTextUI()

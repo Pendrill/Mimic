@@ -1,0 +1,20 @@
+{INDEX},1,{NAME},Shane,{DIALOGUE},hello there
+,,{NAME},Shane,{DIALOGUE},you might be wondering why you are seing this
+,,{NAME},Eric,{DIALOGUE},"yeah, why am i seeing this?"
+,,{NAME},Shane,{DIALOGUE},This is just a tutorial
+,,{NAME},Eric,{DIALOGUE},Oh ok cool thanks
+,2,{STOP},,,
+{INDEX},2,{NAME},Shane,{DIALOGUE},Oh you still want to talk?
+,,{NAME},Shane,{DIALOGUE},"you completed the tutorial, that's it we are done"
+,3,{STOP},,,
+{INDEX},3,{NAME},Shane,{DIALOGUE},Please leave me alone.
+,,{NAME},Eric,{DIALOGUE},Ok sorry...
+,3,{STOP},,,
+{INDEX},4,{NAME},Lilly,{DIALOGUE},Oh hi!
+,,,Lilly,{DIALOGUE},YES! this is an other tuorial text :) 
+,,,Eric,{DIALOGUE},ooo ok awesome
+,,,Lilly,{DIALOGUE},glad u were able to click and talk to me!
+,5,{STOP},,,
+,5,{NAME},Lilly,{DIALOGUE},Ok... don't you have somewhere else to be
+,,{NAME},Eric,{DIALOGUE},sorry...
+,5,{STOP},,,

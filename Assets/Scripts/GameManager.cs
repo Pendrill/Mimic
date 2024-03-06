@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public void CharacterWasClicked(GameObject character)
     {
         // we need to get info as to the convo that needs to happen here
+        textManager.SetupNewText(character);
         textManager.ActivateTextUI();
     }
 }
