@@ -142,8 +142,14 @@ public class UICharacter : MonoBehaviour
     {
         _positionLerpCompletion = 0.0f;
         _alphaLerpCompletion = 0.0f;
-        Debug.Log("do we get here?");
         ShowImage(true);
         EnterAnimation();
+    }
+
+    public void DeActivateInitialCharacterUI()
+    {
+        _positionLerpCompletion = 0.0f;
+        _alphaLerpCompletion = 0.0f;
+        HideImage(false);
     }
 }

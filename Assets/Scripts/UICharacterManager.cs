@@ -26,4 +26,10 @@ public class UICharacterManager : MonoBehaviour
         //uiCharacters[1].ActivateInitialCharacterUI();
 
     }
+
+    public void DeActivateUICharacters()
+    {
+        uiCharacters[0].DeActivateInitialCharacterUI();
+        uiCharacters[0].gameObject.SetActive(false);
+    }
 }

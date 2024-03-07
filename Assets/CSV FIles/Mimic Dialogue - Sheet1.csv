@@ -11,9 +11,9 @@
 ,,{NAME},Eric,{DIALOGUE},Ok sorry...
 ,3,{STOP},,,
 {INDEX},4,{NAME},Lilly,{DIALOGUE},Oh hi!
-,,,Lilly,{DIALOGUE},YES! this is an other tuorial text :) 
-,,,Eric,{DIALOGUE},ooo ok awesome
-,,,Lilly,{DIALOGUE},glad u were able to click and talk to me!
+,,{NAME},Lilly,{DIALOGUE},YES! this is an other tuorial text :) 
+,,{NAME},Eric,{DIALOGUE},ooo ok awesome
+,,{NAME},Lilly,{DIALOGUE},glad u were able to click and talk to me!
 ,5,{STOP},,,
 ,5,{NAME},Lilly,{DIALOGUE},Ok... don't you have somewhere else to be
 ,,{NAME},Eric,{DIALOGUE},sorry...
