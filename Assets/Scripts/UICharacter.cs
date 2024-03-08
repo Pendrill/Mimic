@@ -152,4 +152,12 @@ public class UICharacter : MonoBehaviour
         _alphaLerpCompletion = 0.0f;
         HideImage(false);
     }
+
+    public void UpdateCharacterImage(string name)
+    {
+        Sprite newImage = Resources.Load<Sprite>("Art/Characters/" + name.Trim());
+        Debug.Log("Art/Characters/" + name.Trim() + ".png");
+        Debug.Log(newImage);
+        characterImage.sprite = newImage;
+    }
 }

@@ -35,6 +35,7 @@ public class TextManager : MonoBehaviour
 
     private List<string> tempNames = new List<string>();
     private List<string> tempDialogue = new List<string>();
+    private List<string> tempPortrait = new List<string>();
 
     public enum TextState { Wait, TextDisplaying, TextFinished, Done };
     public TextState textCurrentState;
@@ -95,6 +96,7 @@ public class TextManager : MonoBehaviour
 
         OrguanizeText(currentInfoSplit, currentCharacter);
         PopulateCurrentText(tempNames[currentTextIndex], tempDialogue[currentTextIndex]);
+        characterManager.UpdateCharacterImage(tempPortrait[currentTextIndex]);
     }
 
     private void OrguanizeText(string[] currentInfo, Character personClicked)
@@ -111,6 +113,10 @@ public class TextManager : MonoBehaviour
             else if (current.Trim().Equals("{DIALOGUE}".Trim()))
             {
                 tempDialogue.Add(currentInfo[i + 1]);
+            }
+            else if(current.Trim().Equals("{IMAGE}".Trim()))
+            {
+                tempPortrait.Add(currentInfo[i + 1]);
             }
             /*else if (current.Trim().Equals("{STOP}".Trim()))
             {
@@ -135,6 +141,7 @@ public class TextManager : MonoBehaviour
             if(currentTextIndex < tempNames.Count)
             {
                 PopulateCurrentText(tempNames[currentTextIndex], tempDialogue[currentTextIndex]);
+                characterManager.UpdateCharacterImage(tempPortrait[currentTextIndex]);
                 textMarker.GetComponent<TextMarker>().HideMarker();
                 textCurrentState = TextState.TextDisplaying;
 
@@ -152,7 +159,7 @@ public class TextManager : MonoBehaviour
     {
         textPanel.SetActive(true);
         _activateText = true;
-        characterManager.ActivateUICharacters();
+        characterManager.ActivateUICharacters(tempPortrait[0]);
         textCurrentState = TextState.TextDisplaying;
     }
     

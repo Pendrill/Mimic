@@ -17,11 +17,11 @@ public class UICharacterManager : MonoBehaviour
         
     }
 
-    public void ActivateUICharacters()
+    public void ActivateUICharacters(string name)
     {
         uiCharacters[0].gameObject.SetActive(true);
         //uiCharacters[1].gameObject.SetActive(true);
-
+        //UpdateCharacterImage(name);
         uiCharacters[0].ActivateInitialCharacterUI();
         //uiCharacters[1].ActivateInitialCharacterUI();
 
@@ -31,5 +31,11 @@ public class UICharacterManager : MonoBehaviour
     {
         uiCharacters[0].DeActivateInitialCharacterUI();
         uiCharacters[0].gameObject.SetActive(false);
+    }
+
+    public void UpdateCharacterImage(string name)
+    {
+        Debug.Log(name);
+        uiCharacters[0].UpdateCharacterImage(name);
     }
 }

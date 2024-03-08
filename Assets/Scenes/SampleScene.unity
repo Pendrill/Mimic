@@ -1986,7 +1986,7 @@ MonoBehaviour:
   bodyText: {fileID: 1230927831}
   textMarker: {fileID: 347073408}
   textSpeed: 0.03
-  fileData: {fileID: 4900000, guid: d6e54d7304b8cde4b946eef158dd27af, type: 3}
+  fileData: {fileID: 4900000, guid: d858da25163eb2e499bb9f56e413cc02, type: 3}
   textCurrentState: 0
 --- !u!1 &1570022207
 GameObject:

@@ -1,0 +1,20 @@
+{INDEX},1,{NAME},Shane,{DIALOGUE},hello there,{IMAGE},char2Neutral
+,,{NAME},Shane,{DIALOGUE},you might be wondering why you are seing this,{IMAGE},char2Neutral
+,,{NAME},Eric,{DIALOGUE},yeah... why am i seeing this?,{IMAGE},char1Neutral
+,,{NAME},Shane,{DIALOGUE},This is just a tutorial,{IMAGE},char2Happy
+,,{NAME},Eric,{DIALOGUE},Oh ok cool thanks,{IMAGE},char1Happy
+,2,{STOP},,,,,
+{INDEX},2,{NAME},Shane,{DIALOGUE},Oh you still want to talk?,{IMAGE},char2Neutral
+,,{NAME},Shane,{DIALOGUE},you completed the tutorial! That's it we're done,{IMAGE},char2Shocked
+,3,{STOP},,,,,
+{INDEX},3,{NAME},Shane,{DIALOGUE},Please leave me alone.,{IMAGE},char2Neutral
+,,{NAME},Eric,{DIALOGUE},Ok sorry...,{IMAGE},char1Shocked
+,3,{STOP},,,,,
+{INDEX},4,{NAME},Lilly,{DIALOGUE},Oh hi,{IMAGE},char3Neutral
+,,{NAME},Lilly,{DIALOGUE},YES! this is an other tuorial text :) ,{IMAGE},char3Happy
+,,{NAME},Eric,{DIALOGUE},ooo ok awesome,{IMAGE},char1Happy
+,,{NAME},Lilly,{DIALOGUE},glad u were able to click and talk to me!,{IMAGE},char3Happy
+,5,{STOP},,,,,
+,5,{NAME},Lilly,{DIALOGUE},Ok... don't you have somewhere else to be,{IMAGE},char3Shocked
+,,{NAME},Eric,{DIALOGUE},sorry...,{IMAGE},char1Shocked
+,5,{STOP},,,,,
