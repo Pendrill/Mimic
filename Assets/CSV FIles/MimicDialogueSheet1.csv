@@ -18,3 +18,20 @@
 ,5,{NAME},Lilly,{DIALOGUE},Ok... don't you have somewhere else to be,{IMAGE},char3Shocked
 ,,{NAME},Eric,{DIALOGUE},sorry...,{IMAGE},char1Shocked
 ,5,{STOP},,,,,
+{INDEX},6,{NAME},Jeremy,{DIALOGUE},OK this is another tutorial.,{IMAGE},char3Neutral
+,,{NAME},Jeremy,{DIALOGUE},I'm going to ask you a question and you are going to have to respond,{IMAGE},char3Neutral
+,,{NAME},Jeremy,{DIALOGUE},Are you a mimic?,{IMAGE},char3Shocked
+,,{NAME},Eric,{DIALOGUE},{QUESTION}/No!^7/Are you serious?^8/Yes.^9,{IMAGE},hidden
+,-1,{STOP},,,,,
+,7,{NAME},Jeremy,{DIALOGUE},Ok good! now get to work!,{IMAGE},char3Happy
+,10,{STOP},,,,,
+,8,{NAME},Jeremy,{DIALOGUE},YES IM SERIOUS! ,{IMAGE},char3Shocked
+,,{NAME},Jeremy,{DIALOGUE},I need you to start taking this more seriously!,{IMAGE},char3Shocked
+,,{NAME},Jeremy,{DIALOGUE},Now go and get back to work.,{IMAGE},char3Neutral
+,10,{STOP},,,,,
+,9,{NAME},Jeremy,{DIALOGUE},...,{IMAGE},char3Neutral
+,,{NAME},Jeremy,{DIALOGUE},I really hope you are joking.,{IMAGE},char3Neutral
+,,{NAME},Jeremy,{DIALOGUE},Be serious and get back to work!,{IMAGE},char3Shocked
+,10,{STOP},,,,,
+,10,{NAME},Jeremy,{DIALOGUE},Stop wasting time here and get back to work!,{IMAGE},char3Shocked
+,10,{STOP},,,,,

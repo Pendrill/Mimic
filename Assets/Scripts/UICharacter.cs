@@ -156,8 +156,6 @@ public class UICharacter : MonoBehaviour
     public void UpdateCharacterImage(string name)
     {
         Sprite newImage = Resources.Load<Sprite>("Art/Characters/" + name.Trim());
-        Debug.Log("Art/Characters/" + name.Trim() + ".png");
-        Debug.Log(newImage);
         characterImage.sprite = newImage;
     }
 }

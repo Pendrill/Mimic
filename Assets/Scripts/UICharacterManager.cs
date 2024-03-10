@@ -35,7 +35,6 @@ public class UICharacterManager : MonoBehaviour
 
     public void UpdateCharacterImage(string name)
     {
-        Debug.Log(name);
         uiCharacters[0].UpdateCharacterImage(name);
     }
 }
